@@ -15,7 +15,6 @@ std::vector<char> getPerm(const Tree& tree, int n) {
         return {};
     if (tree.getSymb() == '*')
         n=n-1;
-
     std::vector<char> result;
     int tmp = fact(tree.getSize() - 1);
 
