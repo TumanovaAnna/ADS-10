@@ -13,8 +13,10 @@ int fact(int n) {
 std::vector<char> getPerm(const Tree& tree, int n) {
     if (tree.getSize() == 0 || n > fact(tree.getSize()))
         return {};
+    
     if (tree.getSymb() == '*')
         n=n-1;
+    
     std::vector<char> result;
     int tmp = fact(tree.getSize() - 1);
 
