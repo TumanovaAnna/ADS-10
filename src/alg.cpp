@@ -15,10 +15,11 @@ std::vector<char> getPerm(const Tree& tree, int n) {
         return {};
 
     if (tree.getSymb() == '*')
-        n=n-1;
+        n--;
 
     std::vector<char> res;
     int temp = fact(tree.getSize() - 1);
+
     res.push_back(tree[n / temp].getSymb());
     std::vector<char> n2 = getPerm(tree[n / temp], n % temp);
     res.insert(res.end(), n2.begin(), n2.end());
